@@ -39,7 +39,7 @@ public final class Product extends AbstractMappedEntity implements Serializable 
 	@JoinColumn(name = "category_id")
 	private Category category;
 
-	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "user")
+	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "product")
 	private Inventory inventory;
 
 }

@@ -23,7 +23,7 @@ import lombok.NoArgsConstructor;
 @Table(name = "inventory")
 @NoArgsConstructor
 @AllArgsConstructor
-@EqualsAndHashCode(callSuper = true, exclude = {"products"})
+@EqualsAndHashCode(callSuper = true, exclude = {"product"})
 @Data
 @Builder
 public final class Inventory extends AbstractMappedEntity implements Serializable {
@@ -39,7 +39,7 @@ public final class Inventory extends AbstractMappedEntity implements Serializabl
     private Boolean isAvailable;
 
     @Column(name = "quantity")
-    private Boolean quantity;
+    private Integer quantity;
 
     @JsonIgnore
     @OneToOne(fetch = FetchType.LAZY)

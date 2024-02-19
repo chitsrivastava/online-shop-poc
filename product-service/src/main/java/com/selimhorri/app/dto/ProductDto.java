@@ -21,14 +21,15 @@ public class ProductDto implements Serializable {
 	private Integer productId;
 	private String productTitle;
 	private String imageUrl;
-	private String sku;
 	private Double priceUnit;
-	private Integer quantity;
-	
+
 	@JsonProperty("category")
 	@JsonInclude(Include.NON_NULL)
 	private CategoryDto categoryDto;
-	
+
+	@JsonProperty("inventory")
+	@JsonInclude(Include.NON_NULL)
+	private InventoryDto inventoryDto;
 }
 
 

@@ -5,6 +5,6 @@ CREATE TABLE inventory (
     quantity INT,
 	is_available BOOLEAN,
 	created_at TIMESTAMP DEFAULT LOCALTIMESTAMP NOT NULL NULL_TO_DEFAULT,
-	updated_at TIMESTAMP
+	updated_at TIMESTAMP,
     FOREIGN KEY (product_id) REFERENCES products(product_id)
 );
