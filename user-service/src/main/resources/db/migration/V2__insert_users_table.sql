@@ -1,9 +1,5 @@
 
 INSERT INTO users
-(first_name, last_name) VALUES
-('selim', 'horri'),
-('amine', 'ladjimi'),
-('omar', 'derouiche'),
-('admin', 'admin');
-
-
+(first_name, phone ) VALUES
+('Chitransh', '9876543210'),
+('Sanket', '9867543210');

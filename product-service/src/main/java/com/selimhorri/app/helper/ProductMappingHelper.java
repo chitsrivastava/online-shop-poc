@@ -12,14 +12,11 @@ public interface ProductMappingHelper {
 				.productId(product.getProductId())
 				.productTitle(product.getProductTitle())
 				.imageUrl(product.getImageUrl())
-				.sku(product.getSku())
 				.priceUnit(product.getPriceUnit())
-				.quantity(product.getQuantity())
 				.categoryDto(
 						CategoryDto.builder()
 							.categoryId(product.getCategory().getCategoryId())
 							.categoryTitle(product.getCategory().getCategoryTitle())
-							.imageUrl(product.getCategory().getImageUrl())
 							.build())
 				.build();
 	}
@@ -29,14 +26,11 @@ public interface ProductMappingHelper {
 				.productId(productDto.getProductId())
 				.productTitle(productDto.getProductTitle())
 				.imageUrl(productDto.getImageUrl())
-				.sku(productDto.getSku())
 				.priceUnit(productDto.getPriceUnit())
-				.quantity(productDto.getQuantity())
 				.category(
 						Category.builder()
 							.categoryId(productDto.getCategoryDto().getCategoryId())
 							.categoryTitle(productDto.getCategoryDto().getCategoryTitle())
-							.imageUrl(productDto.getCategoryDto().getImageUrl())
 							.build())
 				.build();
 	}

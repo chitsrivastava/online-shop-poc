@@ -1,8 +1,7 @@
-
 INSERT INTO products
-(category_id, product_title, image_url, sku, price_unit, quantity) VALUES
-(1, 'asus', 'xxx', 'dfqejklejrkn', 0, 50),
-(1, 'hp', 'xxx', 'zsejfedbjh', 0, 50),
-(2, 'Armani', 'xxx', 'fjdvf', 0, 50),
-(3, 'GTA', 'xxx', 'qsdkjnvfrekjrf', 0, 50);
-
+(product_title, category_id, price_unit ) VALUES
+('Bat',1,11500.00),
+('Helmet',1,2500.00),
+('Headphone',2,25000.00),
+('Earphone',2,9000.00),
+('S24',3,110000.00);

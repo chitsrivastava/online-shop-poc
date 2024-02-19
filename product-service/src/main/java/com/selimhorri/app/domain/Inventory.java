@@ -1,9 +1,6 @@
 package com.selimhorri.app.domain;
 
 import java.io.Serializable;
-import java.util.Set;
-
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -11,8 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -24,32 +20,32 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "categories")
+@Table(name = "inventory")
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = true, exclude = {"products"})
 @Data
 @Builder
-public final class Category extends AbstractMappedEntity implements Serializable {
-	
-	private static final long serialVersionUID = 1L;
-	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "category_id", unique = true, nullable = false, updatable = false)
-	private Integer categoryId;
-	
-	@Column(name = "category_title")
-	private String categoryTitle;
+public final class Inventory extends AbstractMappedEntity implements Serializable {
 
-	@JsonIgnore
-	@OneToMany(mappedBy = "category", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-	private Set<Product> products;
-	
+    private static final long serialVersionUID = 1L;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "inventory_id", unique = true, nullable = false, updatable = false)
+    private Integer inventoryId;
+
+    @Column(name = "is_available")
+    private Boolean isAvailable;
+
+    @Column(name = "quantity")
+    private Boolean quantity;
+
+    @JsonIgnore
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "product_id", nullable = false)
+    private Product product;
 }
-
-
-
 
 
 

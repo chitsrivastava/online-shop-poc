@@ -101,9 +101,7 @@
 	
 	<modules>
 		<module>service-discovery</module>
-		<module>cloud-config</module>
 		<module>api-gateway</module>
-		<module>proxy-client</module>
 		<module>user-service</module>
 		<module>product-service</module>
 	</modules>
