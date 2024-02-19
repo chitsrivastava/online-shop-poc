@@ -31,7 +31,10 @@ public final class Product extends AbstractMappedEntity implements Serializable 
 	
 	@Column(name = "image_url")
 	private String imageUrl;
-	
+
+	@Column(name = "quantity")
+	private Integer quantity;
+
 	@Column(name = "price_unit", columnDefinition = "decimal")
 	private Double priceUnit;
 

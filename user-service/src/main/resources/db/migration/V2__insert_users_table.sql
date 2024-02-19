@@ -1,5 +1,5 @@
 
 INSERT INTO users
 (first_name, phone ) VALUES
-('Chitransh', '9876543210'),
-('Sanket', '9867543210');
+('User1', '9876543210'),
+('User2', '9867543210');
